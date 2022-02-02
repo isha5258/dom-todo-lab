@@ -10,6 +10,8 @@ const toDoList = document.getElementById('todo-list')
 btn.addEventListener('click', function (evt) {
   const newLi = document.createElement('li')
   newLi.textContent = inp.value
+  if (inp.value !== ""){
   inp.value = ""
   document.querySelector('ul').appendChild(newLi)
+  }
 })
