@@ -10,8 +10,22 @@ const toDoList = document.getElementById('todo-list')
 btn.addEventListener('click', function (evt) {
   const newLi = document.createElement('li')
   newLi.textContent = inp.value
-  if (inp.value !== ""){
-  inp.value = ""
-  document.querySelector('ul').appendChild(newLi)
+  if (inp.value !== "") {
+    inp.value = ""
+    document.querySelector('ul').appendChild(newLi)
   }
 })
+
+//new button
+const newBtn = document.createElement('button')
+newBtn.id = 'reset-button'
+newBtn.textContent = 'Reset'
+document.querySelector('body').appendChild(newBtn)
+
+//event listener to remove to to-do list
+newBtn.addEventListener('click', function (evt) {
+  let newLi = document.querySelector('ul')
+  newLi.textContent = ''
+})
+
+
