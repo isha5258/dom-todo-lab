@@ -28,4 +28,10 @@ newBtn.addEventListener('click', function (evt) {
   newLi.textContent = ''
 })
 
+// delete on click
 
+document.querySelector('ul').addEventListener('click', removeListItem)
+
+function removeListItem(evt) {
+  evt.target.remove()
+}
